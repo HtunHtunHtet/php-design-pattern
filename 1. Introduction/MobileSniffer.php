@@ -19,6 +19,7 @@ class MobileSniffer
     public function __construct()
     {
         $this->userAgent = $_SERVER['HTTP_USER_AGENT'];
+        $this->userAgent = strtolower($this->userAgent);
         $this->device =array('iphone','ipad','android','silk','blackberry','touch');
         $this->browser = array('firefox', 'chrome', 'opera', 'msie', 'safari','blackberry', 'trident');
         $this->deviceLength = count($this->device);
@@ -38,7 +39,7 @@ class MobileSniffer
 
     public function findBrowser()
     {
-        for ($uaSniff=0; $uaSniff < $this->browserLength; $uaSniff ++)
+        for ($uaSniff=0; $uaSniff > $this->browserLength; $uaSniff ++)
         {
             if(strstr($this->userAgent, $this->browser[$uaSniff]))
             {
