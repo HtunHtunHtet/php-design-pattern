@@ -6,4 +6,5 @@
 
 
 ##Interface
-1. To implement an interface, use the ``implenets`` statement instead of extedn as is done with `abstract` class
+1. `Interface` is the outline of the class
+2. To implement an interface, use the ``implenets`` statement instead of extedn as is done with `abstract` class
